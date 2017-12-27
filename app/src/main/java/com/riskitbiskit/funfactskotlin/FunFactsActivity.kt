@@ -2,11 +2,15 @@ package com.riskitbiskit.funfactskotlin
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.RelativeLayout
 import android.widget.TextView
+import android.widget.Toast
 
 class FunFactsActivity : AppCompatActivity() {
+    //testing
+    private val LOG_TAG = FunFactsActivity::class.java.simpleName
 
     //variables
     private val factBook = FactBook()
@@ -39,5 +43,7 @@ class FunFactsActivity : AppCompatActivity() {
             showFactButton!!.setTextColor(color)
         }
 
+        //Toast.makeText(this, "Yay, our activity was created", Toast.LENGTH_LONG).show()
+        Log.d(LOG_TAG, "We're logging from the onCreate() method")
     }
 }
